@@ -1,11 +1,11 @@
-﻿using Tabuleiro;
-
+﻿
+using Tabuleiros;
 
 Console.Clear();
 
-Posicao p; 
+Tabuleiro tabs = new Tabuleiro(8,8);
 
-p = new Posicao(8,8);
-System.Console.WriteLine("Posição" + p);
+
+
 Console.ReadLine();
 Console.Clear();
