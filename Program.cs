@@ -1,11 +1,12 @@
-﻿
+﻿using System.Reflection.Metadata;
+using chessGame;
 using Tabuleiros;
 
 Console.Clear();
 
-Tabuleiro tabs = new Tabuleiro(8,8);
+Tabuleiro tab = new Tabuleiro(8,8);
 
-
+Tela.imprimirTabuleiro(tab);
 
 Console.ReadLine();
 Console.Clear();
