@@ -14,7 +14,13 @@ namespace Tabuleiros
     // This piece method accesses the private piece property of an array. 
     public Peca peca(int linha, int coluna)
     {
-       return _pecas[linha, coluna];
+      return _pecas[linha, coluna];
+    }
+    // Operation to place a piece on the board 
+    public void colocarPeca(Peca p, Posicao pos)
+    {
+      _pecas[pos._linhas, pos._colunas] = p;
+      p._posicao = pos;
     }
   }
 }
