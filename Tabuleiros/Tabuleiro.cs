@@ -23,12 +23,15 @@ namespace Tabuleiros
     // Check if there os a given position
     public bool existePeca(Posicao pos)
     {
-       validarPosicao(pos);
-       return peca(pos) != null;
+      validarPosicao(pos);
+      return peca(pos) != null;
     }
     // Operation to place a piece on the board 
     public void colocarPeca(Peca p, Posicao pos)
     {
+      if (existePeca(pos))
+        throw new TabuleiroException("Já existe uma peça nessa posição!");
+
       _pecas[pos._linhas, pos._colunas] = p;
       p._posicao = pos;
     }
